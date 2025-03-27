@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escape Realm - Trải Nghiệm Giải Đố</title>
+    <title>Red Escape - Trải Nghiệm Giải Đố</title>
 </script><link rel="icon" href="https://realescape.vn/wp-content/uploads/2024/05/cropped-REAL-LOGO-1M-01-32x32.png" sizes="32x32" />
 <link rel="icon" href="https://realescape.vn/wp-content/uploads/2024/05/cropped-REAL-LOGO-1M-01-192x192.png" sizes="192x192" />
 <link rel="apple-touch-icon" href="https://realescape.vn/wp-content/uploads/2024/05/cropped-REAL-LOGO-1M-01-180x180.png" />
@@ -62,6 +62,19 @@
             background-color: #dd9933;
             color: #fff;
         }
+	    .dropdown button{
+            border: none;
+            background: none;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0; 
+            background:  #1a1a1a;
+        }
+        .dropdown .dropdown-item{
+            color:white;
+        }
     </style>
 </head>
 <body>
@@ -69,14 +82,27 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
-                <i class="fas fa-ghost me-2"></i>ESCAPE REALM</a>
+                <i class="fas fa-ghost me-2"></i>Red Escape</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i> Trang Chủ</a></li>
-                    <li class="nav-item"><a class="nav-link" href="phong-choi.html"><i class="fas fa-door-open me-1"></i> Phòng Chơi</a></li>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Dropdown button
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="#">Ngôi Mộ Mới Đắp</a></li>
+                          <li><a class="dropdown-item" href="#">Quả Tim Máy</a></li>
+                          <li><a class="dropdown-item" href="#">Rạp Xiếc Kinh Hoàng</a></li>
+                          <li><a class="dropdown-item" href="#">Căn Hầm Tối</a></li>
+                          <li><a class="dropdown-item" href="#">Kẻ Đào Tẩu</a></li>
+                          <li><a class="dropdown-item" href="#">Tiệm May Tư Kỳ</a></li>
+                        </ul>
+                      </div>
+                    </li>
                     <li class="nav-item"><a class="nav-link" href="bang-gia.html"><i class="fas fa-tag me-1"></i> Bảng Giá</a></li>
                     <li class="nav-item"><a class="nav-link " href="dat-phong.html"><i class="fas fa-calendar-check me-1"></i> Đặt Phòng</a></li>
                     <li class="nav-item"><a class="nav-link" href="lien-he.html"><i class="fas fa-phone-alt me-1"></i> Liên Hệ</a></li>
@@ -88,7 +114,7 @@
     <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="container">
-            <h1 class="display-3 fw-bold">Escape Realm</h1>
+            <h1 class="display-3 fw-bold">Red Escape</h1>
             <p class="lead">Trải nghiệm giải đố thực tế đầy kịch tính</p>
             <a href="#games" class="btn btn-custom btn-lg mt-3">Khám Phá Ngay</a>
         </div>
@@ -223,7 +249,7 @@
     <!-- Footer -->
     <footer class="footer text-center">
         <div class="container">
-            <p>© 2025 Escape Realm. All rights reserved.</p>
+            <p>© 2025 Red Escape. All rights reserved.</p>
         </div>
     </footer>
 
