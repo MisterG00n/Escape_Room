@@ -62,17 +62,25 @@
             background-color: #dd9933;
             color: #fff;
         }
-	    .dropdown button{
+	.dropdown button{
             border: none;
             background: none;
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.7);    
+        }
+        .dropdown .dropdown-menu{
+            background:  #1a1a1a;
+            color:white;
         }
         .dropdown:hover .dropdown-menu {
             display: block;
-            margin-top: 0; 
+            margin-top: 2.5px; 
             background:  #1a1a1a;
+            color:white;
         }
         .dropdown .dropdown-item{
+            display: block;
+            margin-top: 2.5px; 
+            background:  #1a1a1a;
             color:white;
         }
     </style>
@@ -89,9 +97,10 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i> Trang Chủ</a></li>
+			<li>
                     <div class="dropdown">
                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                          Dropdown button
+                          Phòng chơi
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                           <li><a class="dropdown-item" href="#">Ngôi Mộ Mới Đắp</a></li>
