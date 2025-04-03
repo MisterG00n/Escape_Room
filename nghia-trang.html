@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Realm - Trải Nghiệm Giải Đố</title>
+    </script><link rel="icon" href="https://realescape.vn/wp-content/uploads/2024/05/cropped-REAL-LOGO-1M-01-32x32.png" sizes="32x32" />
+    <link rel="icon" href="https://realescape.vn/wp-content/uploads/2024/05/cropped-REAL-LOGO-1M-01-192x192.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://realescape.vn/wp-content/uploads/2024/05/cropped-REAL-LOGO-1M-01-180x180.png" />
+    <meta name="msapplication-TileImage" content="https://realescape.vn/wp-content/uploads/2024/05/cropped-REAL-LOGO-1M-01-270x270.png" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a1a1a;
+            color: #fff;
+        }
+        .navbar {
+            background-color: #850000;
+        }
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://realescape.vn/wp-content/uploads/2023/09/banner-web-seen-01-1024x288.jpg  ') no-repeat center;
+            background-size: cover;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+        .game-card {
+            transition: all 0.3s ease;
+            background-color: #242628;
+            border: none;
+        }
+        .card-body{
+            color: white;
+        }
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(133, 0, 0, 0.5);
+        }
+        .game-card img {
+            height: 300px;
+            object-fit: cover;
+        }
+        .section-title {
+            color: #dd9933;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .footer {
+            background-color: #333333;
+            padding: 40px 0;
+        }
+        .btn-custom {
+            background-color: #850000;
+            color: #fff;
+            border-radius: 25px;
+            padding: 10px 30px;
+            transition: background-color 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #dd9933;
+            color: #fff;
+        }
+        .description{
+            display: block;
+            max-width: 1000px;
+        }
+        #section_description {
+            padding-top: 30px;
+            padding-bottom: 30px;
+            max-width: 1120px;   
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #main_img {
+            width: 100%;
+        }
+        @media (min-width:550px) {
+            #main_img {
+                width: 85%;
+            }
+        }
+        .dropdown button{
+            border: none;
+            background: none;
+            color: rgba(255, 255, 255, 0.7);    
+            margin-top: 1.5px;
+            box-shadow: none;
+        }
+        .dropdown .dropdown-menu{
+            margin-top: 0px; 
+            background:  #1a1a1a;
+            color:white;
+        }
+        .dropdown :hover{
+            background: none;
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0px; 
+            background:  #1a1a1a;
+            color:white;
+        }
+        .dropdown .dropdown-item{
+            display: block;
+            margin-top: 0px; 
+            background:  #1a1a1a;
+            color:white;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- Navigation https://realescape.vn/wp-content/uploads/2024/05/FILE-IN-60x80-POSTER-REAL-01-768x1024.jpg  -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="fas fa-ghost me-2"></i>RED ROOM</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i> Trang Chủ</a></li>
+			        <li class="nav-item">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Phòng chơi
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                          <li><a class="dropdown-item" href="nghia-trang.html">Ngôi Mộ Mới Đắp</a></li>
+                          <li><a class="dropdown-item" href="#">Quả Tim Máy</a></li>
+                          <li><a class="dropdown-item" href="#">Rạp Xiếc Kinh Hoàng</a></li>
+                          <li><a class="dropdown-item" href="#">Căn Hầm Tối</a></li>
+                          <li><a class="dropdown-item" href="#">Kẻ Đào Tẩu</a></li>
+                          <li><a class="dropdown-item" href="#">Tiệm May Tư Kỳ</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="bang-gia.html"><i class="fas fa-tag me-1"></i> Bảng Giá</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dat-phong.html"><i class="fas fa-calendar-check me-1"></i>Đặt Phòng</a></li>
+                    <li class="nav-item"><a class="nav-link" href="lien-he.html"><i class="fas fa-phone-alt me-1"></i> Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--HERO-->
+    <section id="home" class="hero-section">
+        <div class="container">
+        </div>
+    </section>
+
+    <section class="section" id="section_description">
+        <div class="bg section-bg fill bg-fill bg-loaded"></div>
+        <div class="section-content relative">
+            <div class="row align-middle align-center" id="row-1278226952">
+                <div id="col-1970616906" class="col medium-5 small-12 large-5">
+                    <div class="col-inner">
+                        <div class="img has-hover" id="main_img">
+                            <div class="img-inner dark">
+                                <img fetchpriority="high" decoding="async" width="400" height="500" 
+                                     src="https://realescape.vn/wp-content/uploads/2024/05/FILE-IN-60x80-POSTER-REAL-01-768x1024.jpg" 
+                                     class="attachment-large size-large" 
+                                     alt="FILE IN 60x80 POSTER REAL 01" 
+                                     srcset="https://realescape.vn/wp-content/uploads/2024/05/FILE-IN-60x80-POSTER-REAL-01-768x1023.jpg 768w, 
+                                             https://realescape.vn/wp-content/uploads/2024/05/FILE-IN-60x80-POSTER-REAL-01-225x300.jpg 225w, 
+                                             https://realescape.vn/wp-content/uploads/2024/05/FILE-IN-60x80-POSTER-REAL-01-1153x1536.jpg 1153w, 
+                                             https://realescape.vn/wp-content/uploads/2024/05/FILE-IN-60x80-POSTER-REAL-01-1537x2048.jpg 1537w, 
+                                             https://realescape.vn/wp-content/uploads/2024/05/FILE-IN-60x80-POSTER-REAL-01.jpg 1702w" 
+                                     sizes="(max-width: 768px) 100vw, 768px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="col-708955949" class="col medium-5 small-12 large-5">
+                    <div class="col-inner text-center dark">
+                        <h1 style="text-align: left; color: #850000;"><strong>“NGHĨA TRANG” CÓ GÌ?</strong></h1>
+                        <p style="text-align: left; color: #850000;"><strong>(Lưu ý: Phòng chơi chỉ phục vụ ở cơ sở Sư Vạn Hạnh)</strong></p>
+                        <ul>
+                            <li>Một căn nhà bỏ hoang đã bị niêm phong cuối nghĩa trang.</li>
+                            <li>Vụ tự sát bí ẩn của hai chị em gái.</li>
+                            <li>Cổ vật gia truyền biến mất không rõ lí do.</li>
+                            <li>Những vết tích kì lạ tại hiện trường bỏ hoang.</li>
+                        </ul>
+                        <p>Liệu các “tín đồ” của những câu chuyện tâm linh và kinh dị có tìm ra được chiếc vòng cổ của tổ mộ? Sự thật bí ẩn đằng sau căn nhà bị niêm phong và cái chết thương tâm của hai chị em là gì?</p>
+                        <a href="https://realescape.vn/dat-phong/" target="_self" class="button alert is-large" style="border-radius:10px;">
+                            <span>Đặt phòng</span>
+                        </a>
+                    </div>
+                </div>
+            </div><hr>
+            
+            <div class="row row-collapse align-center" id="row-240496827">
+                <div id="col-25867735" class="col small-12 large-12">
+                    <div class="col-inner">
+                        <div class="text-center">
+                            <div class="is-divider divider clearfix" style="max-width:80%;background-color:rgb(255, 255, 255);"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row align-center" id="row-663939688">
+                <div id="col-1709916458" class="col medium-10 small-12 large-10">
+                    <div class="col-inner">
+                        <h2 class="wp-block-heading" style="text-align: center; color: white;">Cốt truyện</h2>
+                        <p style="color: white;">Khu mộ này trước đây từng là nơi ở của một gia đình có 2 chị em gái chung sống cùng bố mẹ. Từ sau vụ tự sát bí ẩn năm ấy, căn nhà cuối khu mộ đã bị niêm phong và bỏ hoang không ai dám qua lại. Người ta đồn rằng nếu ai phạm vào căn nhà đó sẽ bị ma quỷ vật chết, đau đớn như cái chết thương tâm của 2 chị em nhà này trước đây.</p>
+                        <h3 style="color: white;"><strong>🔔 Hướng dẫn chơi</strong></h3>
+                        <ul style="color: white;">
+                            <li>Nhập vai thành một nhóm trộm mộ, nhận được nhiệm vụ đi tìm lại cổ vật gia truyền.</li>
+                            <li>Giả danh làm người thay ca cho bác quản trang Tài để đột nhập vào nghĩa trang.</li>
+                            <li>Người thay ca phải giúp đưa các thành viên còn lại vào trong.</li>
+                            <li>Không để các vong linh chạm vào người (bị chạm trừ 5 phút/lần).</li>
+                            <li>Phòng thờ là nơi an toàn để tránh vong linh.</li>
+                            <li>Không để bác Tài phát hiện, nếu không sẽ bị đuổi ra khỏi nghĩa trang.</li>
+                            <li>Có 1 gợi ý từ game master, hãy đưa dấu X trước cam để được hỗ trợ.</li>
+                        </ul>
+                        <p style="color: white;">Liệu bạn có đủ cam đảm và khôn ngoan để tìm ra cổ vật và vén bức màn bí mật ẩn giấu bấy lâu nay? Tham gia ngay vào phòng chơi của <strong style="color: #d83131;">REAL ESCAPE</strong> nào!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">Liên Hệ</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Thông Tin Liên Lạc</h4>
+                    <p><strong>CS 1:</strong> 170D/6 Phan Đăng Lưu, P3, Quận Phú Nhuận, TP. HCM</p>
+                    <p><strong>CS 2:</strong> 662/3 Sư Vạn Hạnh, P12, Quận 10, TP. HCM</p>
+                    <p><strong>Hotline:</strong> 090.269.83.62</p>
+                    <p><strong>Giờ mở cửa:</strong> 09:00 - 22:00 (Tất cả các ngày)</p>
+                    <div class="social-icons mt-3">
+                        <a href="https://www.facebook.com/RealEscapeRoomSaiGon" class="btn btn-custom me-2"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.tiktok.com/@real.escape.saigon" class="btn btn-custom me-2"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="btn btn-custom"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Họ và Tên">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Tin nhắn"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom w-100">Gửi Tin Nhắn</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>© 2025 Escape Realm. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Font Awesome for icons -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const section = document.querySelector(this.getAttribute('href'));
+                section.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
