@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Phòng - Escape Realm</title>
+    <!-- Favicon -->
+    <link rel="icon" href="https://realescape.vn/wp-content/uploads/2024/05/cropped-REAL-LOGO-1M-01-32x32.png" sizes="32x32" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../../css/dat-phong.css">
+ 
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="../../index.html">
+                <i class="fas fa-ghost me-2"></i>RED ROOM</a>
+          
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../../index.html"><i class="fas fa-home me-1"></i> Trang Chủ</a></li>
+			        <li>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                          Phòng chơi
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="../room/phong-choi-nha-ma.html">Ngôi Nhà Ma Ám</a></li>
+                            <li><a class="dropdown-item" href="../room/phong-choi-benh-vien.html">Bệnh Viện Tâm Thần</a></li>
+                            <li><a class="dropdown-item" href="../room/phong-choi-thanh-pho.html">Thành Phố Im Lặng</a></li>
+                            <li><a class="dropdown-item" href="../room/phong-choi-im-lang.html">Im Lặng Là Sống</a></li>
+                            <li><a class="dropdown-item" href="../room/phong-choi-5-tieng.html">5 Tiếng</a></li>
+                            <li><a class="dropdown-item" href="../room/phong-choi-the-evil.html">Cái Ác Bên Trong</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="../nav/bang-gia.html"><i class="fas fa-tag me-1"></i> Bảng Giá</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../nav/dat-phong.html"><i class="fas fa-calendar-check me-1"></i> Đặt Phòng</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section" style=" background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../img/background.jpg') no-repeat center; background-size: cover; height: 80vh;">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-4">ĐẶT PHÒNG <p style="color: #880404;">RED ROOM</p> </h1>
+                    <p class="lead">Chọn phòng chơi và thời gian phù hợp với bạn</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    
+<div class="booking-card p-4 mb-4">
+    <h2 class="section-title text-center mb-4">1. Chọn Phòng Chơi</h2>
+    <div class="row">
+        <!-- The Cemetery -->
+        <div class="col-md-6 mb-3 game-option" onclick="selectGame(this, 'Ngôi Nhà Ma Ám', 250000)">
+            <div class="d-flex align-items-center">
+                <img src="../../img/nha-ma.jpg" class="img-fluid rounded me-3" style="width: 80px; height: 80px; object-fit: cover;" alt="Ngôi Nhà Ma Ám">
+                <div>
+                    <h5 class="mb-1">Ngôi Nhà Ma Ám</h5>
+                    <p >2-6 người</p>
+                    <p class="mb-0 text-warning">250.000đ/người</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Black Circus -->
+        <div class="col-md-6 mb-3 game-option" onclick="selectGame(this, 'Bệnh Viện Tâm Thần', 280000)">
+            <div class="d-flex align-items-center">
+                <img src="../../img/Benh-vien.jpg" class="img-fluid rounded me-3" style="width: 80px; height: 80px; object-fit: cover;" alt="Bệnh Viện Tâm Thần">
+                <div>
+                    <h5 class="mb-1">Bệnh Viện Tâm Thần</h5>
+                    <p >4-8 người</p>
+                    <p class="mb-0 text-warning">280.000đ/người</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Bloody Heart -->
+        <div class="col-md-6 mb-3 game-option" onclick="selectGame(this, 'Thành Phố Im Lặng', 300000)">
+            <div class="d-flex align-items-center">
+                <img src="../../img/thanh-pho.jpg" class="img-fluid rounded me-3" style="width: 80px; height: 80px; object-fit: cover;" alt="Thành Phố Im Lặng">
+                <div>
+                    <h5 class="mb-1">Thành Phố Im Lặng</h5>
+                    <p >3-5 người</p>
+                    <p class="mb-0 text-warning">300.000đ/người</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- The Basement -->
+        <div class="col-md-6 mb-3 game-option" onclick="selectGame(this, 'Im Lặng Là Sống', 270000)">
+            <div class="d-flex align-items-center">
+                <img src="../../img/su-im-lang.jpeg" class="img-fluid rounded me-3" style="width: 80px; height: 80px; object-fit: cover;" alt="Im Lặng Là Sống">
+                <div>
+                    <h5 class="mb-1">Im Lặng Là Sống</h5>
+                    <p >2-5 người</p>
+                    <p class="mb-0 text-warning">270.000đ/người</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- The Fugitive -->
+        <div class="col-md-6 mb-3 game-option" onclick="selectGame(this, '5 Tiếng', 290000)">
+            <div class="d-flex align-items-center">
+                <img src="../../img/five.jpg" class="img-fluid rounded me-3" style="width: 80px; height: 80px; object-fit: cover;" alt="5 Tiếng">
+                <div>
+                    <h5 class="mb-1">5 Tiếng</h5>
+                    <p >3-6 người</p>
+                    <p class="mb-0 text-warning">290.000đ/người</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- The Tailor -->
+        <div class="col-md-6 mb-3 game-option" onclick="selectGame(this, 'Cái Ác Bên Trong', 260000)">
+            <div class="d-flex align-items-center">
+                <img src="../../img/the-evil.jpg" class="img-fluid rounded me-3" style="width: 80px; height: 80px; object-fit: cover;" alt="Cái Ác Bên Trong">
+                <div>
+                    <h5 class="mb-1">Cái Ác Bên Trong</h5>
+                    <p >2-4 người</p>
+                    <p class="mb-0 text-warning">260.000đ/người</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                    
+                    <div class="booking-card p-4 mb-4">
+                        <h2 class="section-title text-center mb-4">2. Chọn Ngày & Giờ</h2>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="booking-date" class="form-label">Ngày chơi</label>
+                                <input type="date" class="form-control" id="booking-date" min="">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Số người chơi</label>
+                                <select class="form-select" id="player-count">
+                                    <option value="2">2 người</option>
+                                    <option value="3">3 người</option>
+                                    <option value="4">4 người</option>
+                                    <option value="5">5 người</option>
+                                    <option value="6">6 người</option>
+                                    <option value="7">7 người</option>
+                                    <option value="8">8 người</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <label class="form-label mb-3">Khung giờ trống</label>
+                            <div class="time-slots">
+                                <span class="time-slot" onclick="selectTimeSlot(this)">09:00</span>
+                                <span class="time-slot" onclick="selectTimeSlot(this)">10:30</span>
+                                <span class="time-slot" onclick="selectTimeSlot(this)">12:00</span>
+                                <span class="time-slot" onclick="selectTimeSlot(this)">13:30</span>
+                                <span class="time-slot" onclick="selectTimeSlot(this)">15:00</span>
+                                <span class="time-slot " onclick="selectTimeSlot(this)">16:30</span>
+                                <span class="time-slot" onclick="selectTimeSlot(this)">18:00</span>
+                                <span class="time-slot" onclick="selectTimeSlot(this)">19:30</span>
+                                <span class="time-slot " onclick="selectTimeSlot(this)">21:00</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="booking-card p-4">
+                        <h2 class="section-title text-center mb-4">3. Thông Tin Liên Hệ</h2>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="fullname" class="form-label">Họ và tên</label>
+                                <input type="text" class="form-control" id="fullname" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="phone" class="form-label">Số điện thoại</label>
+                                <input type="tel" class="form-control" id="phone" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="location" class="form-label">Cơ sở</label>
+                                <select class="form-select" id="location">
+                                    <option value="Bình Dương">Bình Dương</option>
+                                </select>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="note" class="form-label">Ghi chú (nếu có)</label>
+                                <textarea class="form-control" id="note" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="booking-card p-4 sticky-summary">
+                        <h2 class="section-title text-center mb-4">ĐƠN ĐẶT PHÒNG</h2>
+                        
+                        <div class="summary-item">
+                            <h5 class="mb-3">Phòng chơi:</h5>
+                            <div class="d-flex justify-content-between">
+                                <span>Ngày:</span>
+                                <span id="summary-date" class="fw-bold">-/-/---</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Giờ:</span>
+                                <span id="summary-time" class="fw-bold">-:-</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Số người:</span>
+                                <span id="summary-players" class="fw-bold"></span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Cơ sở:</span>
+                                <span id="summary-location" class="fw-bold">Bình Dương</span>
+                            </div>
+                            <div class="d-flex justify-content-between">
+                                <span>Giá/người:</span>
+                                <span id="summary-price" class="fw-bold"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="summary-item">
+                            <h5 class="mb-3" id="summary-game"></h5>
+                        </div>
+                        
+                        <hr>
+                        
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <span class="fs-5">Tổng cộng:</span>
+                            <span id="summary-total" class="fs-4 fw-bold text-warning"></span>
+                        </div>
+                        
+                        <button class="btn btn-custom w-100 py-3 fw-bold" onclick="submitBooking()">
+                            <i class="fas fa-check-circle me-2"></i> XÁC NHẬN ĐẶT PHÒNG
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+       
+     <!-- Contact Section -->
+     <section id="lienhe" class="py-5 ">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3">RED ROOM</h5>
+                    <p>Trải nghiệm giải đố thực tế đầy kịch tính và hồi hộp</p>
+                    <div class="social-icons">
+                        <a href="#" class="text-light me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-light me-3"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="text-light"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <h5 class="mb-3">LIÊN HỆ</h5>
+                    <p><i class="fas fa-map-marker-alt me-2"></i>Địa điểm: 322 Đại lộ Bình Dương,Phường Phú Hòa ,TP.Thủ Dầu Một,tỉnh Bình Dương</p>
+
+                    <p><i class="fa-solid fa-phone"></i> 090.190.120.5</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">GIỜ MỞ CỬA</h5>
+                    <p>Thứ 2 - Chủ nhật</p>
+                    <p>09:00 - 22:00</p>
+                </div>
+            </div>
+    </section>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <p>©ENIGMA-DEV-TEAM.RED ROOM</p>
+        </div>
+    </footer>
+    <div class="chat-button" onclick="toggleChatPopup()">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <!-- Chat Button -->
+    <div class="chat-button" onclick="toggleChatPopup()">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+    
+    <!-- Popup chat -->
+    <div id="chatPopup" class="chat-popup">
+        <div class="chat-header">
+            <span>Liên hệ với chúng tôi</span>
+            <button class="close-btn" onclick="toggleChatPopup()">×</button>
+        </div>
+        <div class="chat-body">
+            <a href="https://zalo.me/0911918491" target="_blank" class="chat-option">
+                <i class="fa-solid fa-phone"></i>Chat qua Zalo
+            </a>
+            <a href="https://iamiky2.github.io" target="_blank" class="chat-option">
+                <i class="fab fa-facebook-messenger"></i> Chat qua Messenger
+            </a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        //Chat bot
+        function toggleChatPopup() {
+            var popup = document.getElementById('chatPopup');
+            if (popup.style.display === 'block') {
+                popup.style.display = 'none';
+            } else {
+                popup.style.display = 'block';
+            }
+        };
+        
+        // Set min date to today
+        document.addEventListener('DOMContentLoaded', function() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('booking-date').min = today;
+            
+            // Update summary when player count changes
+            document.getElementById('player-count').addEventListener('change', updateSummary);
+            document.getElementById('location').addEventListener('change', function() {
+                document.getElementById('summary-location').textContent = this.value;
+            });
+            
+            // Update date in summary when changed
+            document.getElementById('booking-date').addEventListener('change', function() {
+                if (this.value) {
+                    const date = new Date(this.value);
+                    const formattedDate = date.toLocaleDateString('vi-VN');
+                    document.getElementById('summary-date').textContent = formattedDate;
+                } else {
+                    document.getElementById('summary-date').textContent = '--/--/----';
+                }
+            });
+        });
+        
+        // Select game function
+        function selectGame(element, gameName, pricePerPerson) {
+            // Remove selected class from all options
+            document.querySelectorAll('.game-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked option
+            element.classList.add('selected');
+            
+            // Update summary
+            document.getElementById('summary-game').textContent = gameName;
+            document.getElementById('summary-price').textContent = pricePerPerson.toLocaleString('vi-VN') + 'đ';
+            
+            // Store selected game data
+            element.dataset.gameName = gameName;
+            element.dataset.price = pricePerPerson;
+            
+            updateSummary();
+        }
+        
+        // Select time slot function
+        function selectTimeSlot(element) {
+            if (element.classList.contains('booked')) return;
+            
+            // Remove selected class from all time slots
+            document.querySelectorAll('.time-slot').forEach(slot => {
+                if (!slot.classList.contains('booked')) {
+                    slot.classList.remove('selected');
+                }
+            });
+            
+            // Add selected class to clicked slot
+            element.classList.add('selected');
+            
+            // Update summary
+            document.getElementById('summary-time').textContent = element.textContent;
+        }
+        
+        // Update summary total
+        function updateSummary() {
+            const selectedGame = document.querySelector('.game-option.selected');
+            const playerCount = parseInt(document.getElementById('player-count').value);
+            
+            if (selectedGame) {
+                const pricePerPerson = parseInt(selectedGame.dataset.price);
+                const total = pricePerPerson * playerCount;
+                document.getElementById('summary-total').textContent = total.toLocaleString('vi-VN') + 'đ';
+            } else {
+                document.getElementById('summary-total').textContent = '0đ';
+            }
+            
+            document.getElementById('summary-players').textContent = playerCount;
+        }
+        
+        // Submit booking function
+        function submitBooking() {
+            const fullname = document.getElementById('fullname').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const gameName = document.getElementById('summary-game').textContent;
+            const date = document.getElementById('summary-date').textContent;
+            const time = document.getElementById('summary-time').textContent;
+            const players = document.getElementById('summary-players').textContent;
+            const total = document.getElementById('summary-total').textContent;
+            
+            // Simple validation
+            if (gameName === 'Chưa chọn') {
+                alert('Vui lòng chọn phòng chơi');
+                return;
+            }
+            
+            if (date === '--/--/----') {
+                alert('Vui lòng chọn ngày chơi');
+                return;
+            }
+            
+            if (time === '--:--') {
+                alert('Vui lòng chọn giờ chơi');
+                return;
+            }
+            
+            if (!fullname || !phone || !email) {
+                alert('Vui lòng điền đầy đủ thông tin liên hệ');
+                return;
+            }
+            
+            // In a real application, you would send this data to the server
+            const bookingData = {
+                fullname,
+                phone,
+                email,
+                gameName,
+                date,
+                time,
+                players,
+                total,
+                location: document.getElementById('summary-location').textContent
+            };
+            
+            console.log('Booking data:', bookingData);
+            
+            // Show success message
+            alert(`Đặt phòng thành công!\n\nPhòng: ${gameName}\nNgày: ${date}\nGiờ: ${time}\nSố người: ${players}\nTổng: ${total}\n\nChúng tôi sẽ liên hệ với bạn để xác nhận.`);
+            
+            // Reset form (in a real app, you might redirect instead)
+            document.querySelectorAll('.game-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            document.querySelectorAll('.time-slot').forEach(slot => {
+                if (!slot.classList.contains('booked')) {
+                    slot.classList.remove('selected');
+                }
+            });
+            document.getElementById('fullname').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('note').value = '';
+            document.getElementById('summary-game').textContent = 'Chưa chọn';
+            document.getElementById('summary-date').textContent = '--/--/----';
+            document.getElementById('summary-time').textContent = '--:--';
+            document.getElementById('summary-players').textContent = '4';
+            document.getElementById('summary-price').textContent = '0đ';
+            document.getElementById('summary-total').textContent = '0đ';
+        }
+    </script>
+</body>
+</html>

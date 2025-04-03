@@ -1,0 +1,298 @@
+:root {
+    --primary-color: #880404;
+    --secondary-color: #dd9933;
+    --dark-color: #1a1a1a;
+    --light-color: #ffffff;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding-top: 70px;
+}
+
+.navbar {
+    position: fixed;
+top: 0;
+width: 100%;
+z-index: 1000;
+    background-color: var(--primary-color) !important;
+}
+.sticky-summary {
+position: sticky;
+top: 80px; /* Dưới navbar 10px */
+z-index: 10;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+
+.hero-section {
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.booking-card {
+    background-color: #242628;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.booking-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(136, 4, 4, 0.4);
+}
+
+.btn-custom {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 25px;
+    padding: 10px 30px;
+    transition: all 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    transform: translateY(-2px);
+}
+
+.section-title {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+.form-control, .form-select {
+    background-color: #3b3939;
+    border: 1px solid #ffffff;
+    color: var(--light-color);
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #3a3a3a;
+    color: var(--light-color);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 254, 254, 0.699);
+}
+
+.game-option {
+    border: 1px solid #444;  /* màu viền game */
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.game-option:hover {
+    border-color: var(--secondary-color);
+    background-color: rgba(231, 145, 16, 0.1);     /* màu khi lựa game */
+
+}
+
+.game-option.selected {
+    border-color: var(--secondary-color);
+    background-color: rgba(221, 153, 51, 0.2); /* màu khi chọn game */
+}
+
+.time-slot {
+    display: inline-block;
+    padding: 8px 15px;
+    margin: 5px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.time-slot:hover {
+    border-color: var(--secondary-color);
+}
+
+.time-slot.selected {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    border-color: var(--secondary-color);
+}
+
+
+
+.summary-item {
+    border-bottom: 1px dashed #444;
+    padding: 10px 0;
+}
+
+.footer {
+    background-color: #333;
+    padding: 5px 0;
+}
+.dropdown button{
+    border: none;
+    background: none;
+    color: rgba(255, 255, 255, 0.7);    
+    margin-top: 1.5px;
+}
+.dropdown .dropdown-menu{
+    margin-top: 0px; 
+    background:  #1a1a1a;
+    color:white;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0px; 
+    background:  #1a1a1a;
+    color:white;
+}
+.dropdown .dropdown-item{
+    display: block;
+    margin-top: 0px; 
+    background:  #1a1a1a;
+    color:white;
+}
+/* Thêm vào phần CSS */
+.dropdown .dropdown-item {
+display: block;
+margin-top: 0px; 
+background: #1a1a1a;
+color: white;
+transition: all 0.3s ease;
+padding: 10px 15px;
+border-left: 3px solid transparent;
+}
+
+.dropdown .dropdown-item:hover {
+background: #8c1414;
+color: white;
+border-left: 3px solid #040404;
+transform: translateX(5px);
+}
+
+.dropdown .dropdown-menu {
+margin-top: 0px; 
+background: #1a1a1a;
+color: white;
+border: 1px solid #880404;
+box-shadow: 0 5px 15px rgba(136, 4, 4, 0.5);
+}
+
+.dropdown-toggle::after {
+transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+transform: rotate(180deg);
+}
+
+.dropdown-toggle {
+transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle {
+color: #dd9933;
+}
+/* Style cho nút chat */
+.chat-button {
+position: fixed;
+bottom: 20px;
+right: 20px;
+width: 60px;
+height: 60px;
+background-color: #850000;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+z-index: 1000;
+transition: all 0.3s ease;
+}
+
+.chat-button:hover {
+background-color: #dd9933;
+transform: scale(1.1);
+}
+
+.chat-button i {
+font-size: 24px;
+color: white;
+}
+
+/* Style cho popup chat */
+.chat-popup {
+position: fixed;
+bottom: 90px;
+right: 20px;
+width: 250px;
+background-color: #1a1a1a;
+border: 1px solid #850000;
+border-radius: 10px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+display: none;
+z-index: 1000;
+}
+
+.chat-header {
+background-color: #850000;
+color: white;
+padding: 10px;
+border-radius: 10px 10px 0 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.chat-header span {
+font-size: 14px;
+font-weight: bold;
+}
+
+.close-btn {
+background: none;
+border: none;
+color: white;
+font-size: 20px;
+cursor: pointer;
+}
+
+.chat-body {
+padding: 10px;
+}
+
+.chat-option {
+display: flex;
+align-items: center;
+padding: 10px;
+color: white;
+text-decoration: none;
+transition: all 0.3s ease;
+}
+
+.chat-option:hover {
+background-color: #333333;
+border-radius: 5px;
+color: #dd9933;
+}
+
+.chat-option i {
+margin-right: 10px;
+font-size: 20px;
+}

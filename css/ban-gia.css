@@ -1,0 +1,187 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+.navbar {
+    background-color: #850000;
+}
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../../img/background.jpg") no-repeat center;
+    background-size: cover;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.game-card {
+    transition: all 0.3s ease;
+    background-color: #242628;
+    border: none;
+}
+.card-body{
+    color: white;
+}
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(133, 0, 0, 0.5);
+}
+.game-card img {
+    height: 300px;
+    object-fit: cover;
+}
+.section-title {
+    color: #dd9933;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.footer {
+    background-color: #333333;
+    padding: 5px 0;
+}
+.btn-custom {
+    background-color: #850000;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 30px;
+    transition: background-color 0.3s;
+}
+.btn-custom:hover {
+    background-color: #dd9933;
+    color: #fff;
+}
+.description{
+    display: block;
+    max-width: 1000px;
+}
+#section_description {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 1120px;   
+    margin-left: auto;
+    margin-right: auto;
+}
+#main_img {
+    width: 100%;
+}
+@media (min-width:550px) {
+    #main_img {
+        width: 85%;
+    }
+}
+table{
+    border-width: 20px;
+}
+.dropdown button{
+    border: none;
+    background: none;
+    color: rgba(255, 255, 255, 0.7);   
+    margin-top: 1.5px; 
+}
+.dropdown .dropdown-menu{
+    margin-top: 0px; 
+    background:  #1a1a1a;
+    color:white;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0px; 
+    background:  #1a1a1a;
+    color:white;
+}
+.dropdown .dropdown-item{
+    display: block;
+    margin-top: 0px; 
+    background:  #1a1a1a;
+    color:white;
+}
+/* Chat Button Styles */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #850000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.chat-button:hover {
+    background-color: #dd9933;
+    transform: scale(1.1);
+}
+
+.chat-button i {
+    font-size: 24px;
+    color: white;
+}
+
+/* Style cho popup chat */
+.chat-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 250px;
+    background-color: #1a1a1a;
+    border: 1px solid #850000;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+}
+
+.chat-header {
+    background-color: #850000;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+}
+
+.chat-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.chat-option:hover {
+    background-color: #333333;
+    border-radius: 5px;
+    color: #dd9933;
+}
+
+.chat-option i {
+    margin-right: 10px;
+    font-size: 20px;
+}

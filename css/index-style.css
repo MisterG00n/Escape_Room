@@ -1,0 +1,439 @@
+/* style.css - Stylesheet chung cho toàn bộ website RED ROOM */
+
+/* Biến màu sắc */
+:root {
+    --primary-color: #880404;
+    --secondary-color: #dd9933;
+    --dark-color: #1a1a1a;
+    --darker-color: #111;
+    --light-color: #ffffff;
+    --gray-color: #333333;
+    --light-gray: #f8f9fa;
+}
+
+/* Reset và base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.section-title {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+#section_description {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 1120px;     
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Layout */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--primary-color) !important;
+    padding: 0.8rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-brand i {
+    margin-right: 0.5rem;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    transition: all 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--secondary-color);
+}
+
+.nav-link i {
+    margin-right: 0.3rem;
+}
+
+/* Dropdown menu */
+.dropdown button{
+    border: none;
+    background: none;
+    color: rgba(255, 255, 255, 0.7);    
+    margin-top: 1.5px;
+}
+.dropdown .dropdown-menu{
+    margin-top: 0px; 
+    background:  #1a1a1a;
+    color:white;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0px; 
+    background:  #1a1a1a;
+    color:white;  
+}
+.dropdown .dropdown-item{
+    display: block;
+    margin-top: 0px; 
+    background:  #1a1a1a;
+    color:white;
+}
+.dropdown .dropdown-item {
+display: block;
+margin-top: 0px; 
+background: #1a1a1a;
+color: white;
+transition: all 0.3s ease;
+padding: 10px 15px;
+border-left: 3px solid transparent;
+}
+
+.dropdown .dropdown-item:hover {
+background: #8c1414;
+color: white;
+border-left: 3px solid #040404;
+transform: translateX(5px);
+}
+
+.dropdown .dropdown-menu {
+margin-top: 0px; 
+background: #1a1a1a;
+color: white;
+border: 1px solid #880404;
+box-shadow: 0 5px 15px rgba(136, 4, 4, 0.5);
+}
+
+.dropdown-toggle::after {
+transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+transform: rotate(180deg);
+}
+
+.dropdown-toggle {
+transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle {
+color: #dd9933;
+}
+
+
+/* Hero section */
+.hero-section {
+  
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--light-color);
+}
+
+/* Cards */
+.game-card {
+    transition: all 0.3s ease;
+    background-color: #242628;
+    border: none;
+    margin-bottom: 1.5rem;
+    height: 100%;
+}
+
+.game-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(133, 0, 0, 0.5);
+}
+
+.game-card img {
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Buttons */
+.btn-custom {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border-radius: 25px;
+    padding: 10px 30px;
+    transition: all 0.3s;
+    border: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-custom:hover {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    transform: translateY(-2px);
+}
+
+/* Forms */
+.form-control, .form-select {
+    background-color: #3b3939;
+    border: 1px solid var(--light-color);
+    color: var(--light-color);
+    padding: 0.5rem 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: #3a3a3a;
+    color: var(--light-color);
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 254, 254, 0.699);
+}
+
+/* Footer */
+.footer {
+    background-color: rgba(70, 69, 68, 0.76);
+    padding: 1px ;
+    text-align: center;
+}
+
+/* Chat button */
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.chat-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.chat-button i {
+    font-size: 24px;
+    color: var(--light-color);
+}
+
+/* Chat popup */
+.chat-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 250px;
+    background-color: var(--dark-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+}
+
+.chat-header {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+}
+
+.chat-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: var(--light-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.chat-option:hover {
+    background-color: var(--gray-color);
+    border-radius: 5px;
+    color: var(--secondary-color);
+}
+
+.chat-option i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* Utility classes */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-warning {
+    color: var(--secondary-color);
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-5 {
+    margin-bottom: 3rem;
+}
+
+.py-3 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.px-3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+    }
+    
+    .game-card img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        min-height: 50vh;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .btn-custom {
+        padding: 8px 20px;
+    }
+}

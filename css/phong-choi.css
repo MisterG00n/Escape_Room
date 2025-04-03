@@ -1,0 +1,215 @@
+:root {
+    --primary-color: #880404;
+    --secondary-color: #dd9933;
+    --dark-color: #1a1a1a;
+    --darker-color: #111;
+    --light-color: #ffffff;
+    --gray-color: #333333;
+    --light-gray: #f8f9fa;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+}
+.navbar {
+    background-color: #850000;
+}
+.hero-section {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.section-title {
+    color: #dd9933;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.footer {
+    background-color: #333333;
+    padding: 5px 0;
+}
+.btn-custom {
+    background-color: #850000;
+    color: #fff;
+    border-radius: 25px;
+    padding: 10px 30px;
+    transition: background-color 0.3s;
+}
+.btn-custom:hover {
+    background-color: #dd9933;
+    color: #fff;
+}
+.description{
+    display: block;
+    max-width: 1000px;
+}
+#section_description {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-width: 1120px;     
+    margin-left: auto;
+    margin-right: auto;
+}
+#main_img {
+    width: 100%;
+}
+@media (min-width:550px) {
+    #main_img {
+        width: 85%;
+    }
+}
+    /* Menu trò chơi*/
+.dropdown button{
+    border: none;
+    background: none;
+    color: rgba(255, 255, 255, 0.7);   
+    margin-top: 1.5px;     
+}
+.dropdown .dropdown-menu{
+    margin-top: 0px; 
+    background:  #1a1a1a;
+    color:white;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0px; 
+    background:  #1a1a1a;
+    color:white;
+}
+.dropdown .dropdown-item{
+    display: block;
+    margin-top: 0px; 
+    background:  #1a1a1a;
+    color:white;
+}
+.dropdown .dropdown-item {
+display: block;
+margin-top: 0px; 
+background: #1a1a1a;
+color: white;
+transition: all 0.3s ease;
+padding: 10px 15px;
+border-left: 3px solid transparent;
+}
+
+.dropdown .dropdown-item:hover {
+background: #8c1414;
+color: white;
+border-left: 3px solid #040404;
+transform: translateX(5px);
+}
+
+.dropdown .dropdown-menu {
+margin-top: 0px; 
+background: #1a1a1a;
+color: white;
+border: 1px solid #880404;
+box-shadow: 0 5px 15px rgba(136, 4, 4, 0.5);
+}
+
+.dropdown-toggle::after {
+transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle::after {
+transform: rotate(180deg);
+}
+
+.dropdown-toggle {
+transition: all 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle {
+color: #dd9933;
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.chat-button:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.chat-button i {
+    font-size: 24px;
+    color: var(--light-color);
+}
+
+/* Chat popup */
+.chat-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 250px;
+    background-color: var(--dark-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+}
+
+.chat-header {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+}
+
+.chat-option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    color: var(--light-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.chat-option:hover {
+    background-color: var(--gray-color);
+    border-radius: 5px;
+    color: var(--secondary-color);
+}
+
+.chat-option i {
+    margin-right: 10px;
+    font-size: 20px;
+}
